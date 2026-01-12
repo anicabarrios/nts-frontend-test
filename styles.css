@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #2b2b2b;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 24px 20px;
+}
+
+.container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.heading h1 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #fac03aef;
+    font-style: italic;
+}
+
+.trailers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 12.5px));
+    gap: 25px;
+    margin-bottom: 24px;
+}
+
+.trailer-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(80, 80, 80, 0.3);
+    border-left: 3px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+    height: 240px;
+}
+
+.trailer-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.trailer-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.trailer-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.trailer-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.trailer-specs {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.spec-label {
+    color: #fac03aef;
+    font-weight: 600;
+    font-size: 15px;
+    display: block;
+}
+
+.spec-value {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.95);
+    display: block;
+}
+
+.cta-container {
+    text-align: center;
+
+}
+
+.explore-btn {
+    background: #fac03aef;
+    color: #1a1a1a;
+    border: none;
+    padding: 14px 25px;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    .trailers-grid {
+        grid-template-columns: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading h1 {
+        font-size: 35px;
+    }
+
+    .trailer-card {
+        height: 240px;
+    }
+
+    .trailer-title {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading h1 {
+        font-size: 29px;
+    }
+
+    .explore-btn {
+        padding: 14px 32px;
+        font-size: 15px;
+    }
+}
