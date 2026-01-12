@@ -3,6 +3,10 @@
 This project recreates the "Transport Your Load On The Right Trailer With Us" section
 based on the provided Figma design.
 
+## 📸 Screenshot
+
+![Nationwide Transport Services – Trailer Section](./screenshot.png)
+
 ## 🛠 Technologies Used
 - HTML5
 - CSS3 (Grid, Flexbox)
